@@ -34,13 +34,18 @@
 			<div id="face"></div>
 		</div>
 	</div>
+<audio id="backgroundMusic" src="assets/audio/nyancat.mp3" autoplay loop>
+        Your browser does not support the audio element.
+    </audio>
 
 
-	<audio autoplay="true" loop="true">
-		<source src="audio/nyan-cat.ogg" type="audio/ogg" />
-		<source src="audio/nyan-cat.mp3" type="audio/mpeg" />
-	</audio>
-
+<script>
+        // Tự động phát nhạc khi trang tải
+        const audio = document.getElementById('backgroundMusic');
+        audio.play().catch((error) => {
+            console.log('User interaction required to start audio:', error);
+        });
+    </script>
 	<script src="index.js"></script>
 </body>
 </html>
